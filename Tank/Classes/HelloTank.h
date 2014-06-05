@@ -17,6 +17,12 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloTank);
+    
+    //StartGame
+    void startGame();
+    
+    
+    
 };
 
 #endif // __HELLOWORLD_SCENE_H__

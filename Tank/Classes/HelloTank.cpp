@@ -72,9 +72,25 @@ bool HelloTank::init()
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
     
+    //创建菜单
+    
+    auto *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_1(HelloTank::startGame,this));
+    startItemMenu->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2-100));
+    startItemMenu->setFontSizeObj(50);
+    startItemMenu->setFontNameObj("Marker Felt");
+    Menu *pMenu=Menu::create(startItemMenu,NULL);
+    pMenu->setPosition(Point::ZERO);
+    this->addChild(pMenu,1);
+    
+    
     return true;
 }
 
+void HelloTank::startGame()
+{
+    CClog("startGame");
+
+}
 
 void HelloTank::menuCloseCallback(Ref* pSender)
 {
