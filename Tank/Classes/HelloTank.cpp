@@ -74,7 +74,8 @@ bool HelloTank::init()
     
     //创建菜单
     
-    auto *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_1(HelloTank::startGame,this));
+    auto *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_0(HelloTank::startGame,this));
+    
     startItemMenu->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2-100));
     startItemMenu->setFontSizeObj(50);
     startItemMenu->setFontNameObj("Marker Felt");
@@ -88,7 +89,14 @@ bool HelloTank::init()
 
 void HelloTank::startGame()
 {
-    CClog("startGame");
+    printf("startGame");
+    Scene *mapScene=Scene::create();
+    MapLayer *withGameLayer=MapLayer::create();
+    mapScene->addChild(withGameLayer);
+    withGameLayer->initMapwithTank(2, 1, 3);
+    //动画跳转
+    Director::sharedDirector()->replaceScene(CCTransitionJumpZoom::create(1.2f,mapScene));
+    
 
 }
 

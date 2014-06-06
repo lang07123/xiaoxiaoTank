@@ -2,6 +2,7 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "MapLayer.h"
 
 class HelloTank : public cocos2d::Layer
 {
@@ -20,8 +21,6 @@ public:
     
     //StartGame
     void startGame();
-    
-    
     
 };
 
