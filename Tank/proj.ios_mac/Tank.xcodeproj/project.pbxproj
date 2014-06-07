@@ -81,6 +81,7 @@
 		FD1CE997193FC6440040C7E5 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1CE98D193FC6440040C7E5 /* tile.png */; };
 		FD89823E194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
 		FD89823F194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
+		FDEE4230194385A70000D81D /* TankLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDEE422E194385A70000D81D /* TankLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +288,8 @@
 		FD89823C194191E30085A04F /* MapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapLayer.cpp; path = ../Classes/MapLayer.cpp; sourceTree = "<group>"; };
 		FD89823D194191E30085A04F /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLayer.h; path = ../Classes/MapLayer.h; sourceTree = "<group>"; };
 		FD8982421941927E0085A04F /* GlobalSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSet.h; path = ../Classes/GlobalSet.h; sourceTree = "<group>"; };
+		FDEE422E194385A70000D81D /* TankLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TankLayer.cpp; path = ../Classes/TankLayer.cpp; sourceTree = "<group>"; };
+		FDEE422F194385A70000D81D /* TankLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankLayer.h; path = ../Classes/TankLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -363,6 +366,8 @@
 				FD89823C194191E30085A04F /* MapLayer.cpp */,
 				FD89823D194191E30085A04F /* MapLayer.h */,
 				FD8982421941927E0085A04F /* GlobalSet.h */,
+				FDEE422E194385A70000D81D /* TankLayer.cpp */,
+				FDEE422F194385A70000D81D /* TankLayer.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -544,7 +549,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
 						DevelopmentTeam = MDDB52YB8L;
@@ -711,6 +716,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloTank.cpp in Sources */,
+				FDEE4230194385A70000D81D /* TankLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -845,9 +851,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -874,9 +880,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
 				CLANG_CXX_LIBRARY = "libc++";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;

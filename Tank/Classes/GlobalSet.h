@@ -12,4 +12,6 @@
 #define visibleSize Director::getInstance()->getVisibleSize();
 #define origin Director::getInstance()->getVisibleOrigin();
 
+
+
 #endif

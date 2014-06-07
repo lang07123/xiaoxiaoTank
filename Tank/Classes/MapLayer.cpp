@@ -44,10 +44,13 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     _level = mapLevel;
     gameMap = TMXTiledMap::create(String::createWithFormat("map%d.tmx",_level)->getCString());
     
-    printf("lllll");
     //缩放比例
-    scale = visibleSize.height / gameMap->().height;
-    gameMap->setScale(1.59);
+    Size gameH=gameMap->getContentSize();
+    Size LvisibleSize = visibleSize;
+    
+    float scale = LvisibleSize.height / gameH.height;
+    gameMap->setScale(scale);
+    
     gameMap->setPosition(0,0);
     this->addChild(gameMap,1);
 }

@@ -95,7 +95,7 @@ void HelloTank::startGame()
     mapScene->addChild(withGameLayer);
     withGameLayer->initMapwithTank(2, 1, 3);
     //动画跳转
-    Director::sharedDirector()->replaceScene(CCTransitionJumpZoom::create(1.2f,mapScene));
+    Director::getInstance()->replaceScene(CCTransitionJumpZoom::create(1.2f,mapScene));
     
 
 }

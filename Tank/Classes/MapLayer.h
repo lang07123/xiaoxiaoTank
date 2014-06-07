@@ -37,10 +37,13 @@ public:
 private:
     
     int _level;
-    float scale;
+    //float scale;
     
     cocos2d::TMXTiledMap *gameMap;
     cocos2d::TMXObjectGroup *_objects;
+    
+    cocos2d::TMXLayer *_p1Layer;
+    cocos2d::TMXLayer *_p2Layer;
     
     cocos2d::Point objectPosition(cocos2d::TMXObjectGroup *group,const char * object);
     

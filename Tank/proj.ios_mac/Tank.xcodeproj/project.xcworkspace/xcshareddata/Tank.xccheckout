@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FE6A7433-8E9B-48A7-8781-B9DA60ED5233</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Tank</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7A795F9C-0336-4FEB-88A9-9534554DA2C2</key>
+		<string>https://github.com/lang07123/xiaoxiaoTank.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Tank/proj.ios_mac/Tank.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7A795F9C-0336-4FEB-88A9-9534554DA2C2</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lang07123/xiaoxiaoTank.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7A795F9C-0336-4FEB-88A9-9534554DA2C2</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A795F9C-0336-4FEB-88A9-9534554DA2C2</string>
+			<key>IDESourceControlWCCName</key>
+			<string>xiaoxiaoTank</string>
+		</dict>
+	</array>
+</dict>
+</plist>
