@@ -81,7 +81,14 @@
 		FD1CE997193FC6440040C7E5 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1CE98D193FC6440040C7E5 /* tile.png */; };
 		FD89823E194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
 		FD89823F194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
-		FDEE4230194385A70000D81D /* TankLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDEE422E194385A70000D81D /* TankLayer.cpp */; };
+		FD96171E1944735500B332AD /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD96171C1944735500B332AD /* GameScene.cpp */; };
+		FD9617271944754C00B332AD /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617241944754C00B332AD /* sound3.aif */; };
+		FD9617281944754C00B332AD /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617241944754C00B332AD /* sound3.aif */; };
+		FD9617291944754C00B332AD /* start.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617251944754C00B332AD /* start.aif */; };
+		FD96172A1944754C00B332AD /* start.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617251944754C00B332AD /* start.aif */; };
+		FD96172B1944754C00B332AD /* tankbomb.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617261944754C00B332AD /* tankbomb.aif */; };
+		FD96172C1944754C00B332AD /* tankbomb.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617261944754C00B332AD /* tankbomb.aif */; };
+		FDEE4230194385A70000D81D /* TankSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FDEE422E194385A70000D81D /* TankSprite.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -288,8 +295,13 @@
 		FD89823C194191E30085A04F /* MapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapLayer.cpp; path = ../Classes/MapLayer.cpp; sourceTree = "<group>"; };
 		FD89823D194191E30085A04F /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLayer.h; path = ../Classes/MapLayer.h; sourceTree = "<group>"; };
 		FD8982421941927E0085A04F /* GlobalSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSet.h; path = ../Classes/GlobalSet.h; sourceTree = "<group>"; };
-		FDEE422E194385A70000D81D /* TankLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TankLayer.cpp; path = ../Classes/TankLayer.cpp; sourceTree = "<group>"; };
-		FDEE422F194385A70000D81D /* TankLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankLayer.h; path = ../Classes/TankLayer.h; sourceTree = "<group>"; };
+		FD96171C1944735500B332AD /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = ../Classes/GameScene.cpp; sourceTree = "<group>"; };
+		FD96171D1944735500B332AD /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = ../Classes/GameScene.h; sourceTree = "<group>"; };
+		FD9617241944754C00B332AD /* sound3.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound3.aif; sourceTree = "<group>"; };
+		FD9617251944754C00B332AD /* start.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = start.aif; sourceTree = "<group>"; };
+		FD9617261944754C00B332AD /* tankbomb.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = tankbomb.aif; sourceTree = "<group>"; };
+		FDEE422E194385A70000D81D /* TankSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = TankSprite.cpp; path = ../Classes/TankSprite.cpp; sourceTree = "<group>"; };
+		FDEE422F194385A70000D81D /* TankSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TankSprite.h; path = ../Classes/TankSprite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,8 +378,10 @@
 				FD89823C194191E30085A04F /* MapLayer.cpp */,
 				FD89823D194191E30085A04F /* MapLayer.h */,
 				FD8982421941927E0085A04F /* GlobalSet.h */,
-				FDEE422E194385A70000D81D /* TankLayer.cpp */,
-				FDEE422F194385A70000D81D /* TankLayer.h */,
+				FDEE422E194385A70000D81D /* TankSprite.cpp */,
+				FDEE422F194385A70000D81D /* TankSprite.h */,
+				FD96171C1944735500B332AD /* GameScene.cpp */,
+				FD96171D1944735500B332AD /* GameScene.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -489,6 +503,9 @@
 				FD1CE98C193FC6440040C7E5 /* map2.tmx */,
 				FD1CE98D193FC6440040C7E5 /* tile.png */,
 				1AFAF8B916D35E4900DB1158 /* CloseNormal.png */,
+				FD9617241944754C00B332AD /* sound3.aif */,
+				FD9617251944754C00B332AD /* start.aif */,
+				FD9617261944754C00B332AD /* tankbomb.aif */,
 				1AFAF8BA16D35E4900DB1158 /* CloseSelected.png */,
 				1AFAF8BB16D35E4900DB1158 /* HelloWorld.png */,
 			);
@@ -661,6 +678,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FD1CE994193FC6440040C7E5 /* map2.tmx in Resources */,
+				FD9617291944754C00B332AD /* start.aif in Resources */,
 				5087E78117EB970100C73F5D /* Icon-120.png in Resources */,
 				5087E78617EB970100C73F5D /* Icon-76.png in Resources */,
 				5087E77F17EB970100C73F5D /* Default@2x.png in Resources */,
@@ -675,10 +693,12 @@
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
+				FD9617271944754C00B332AD /* sound3.aif in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
 				FD1CE996193FC6440040C7E5 /* tile.png in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
+				FD96172B1944754C00B332AD /* tankbomb.aif in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				FD1CE992193FC6440040C7E5 /* images.pvr.ccz in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
@@ -691,7 +711,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FD96172C1944754C00B332AD /* tankbomb.aif in Resources */,
+				FD9617281944754C00B332AD /* sound3.aif in Resources */,
 				FD1CE993193FC6440040C7E5 /* images.pvr.ccz in Resources */,
+				FD96172A1944754C00B332AD /* start.aif in Resources */,
 				5087E75317EB910900C73F5D /* CloseNormal.png in Resources */,
 				FD1CE997193FC6440040C7E5 /* tile.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
@@ -716,7 +739,8 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloTank.cpp in Sources */,
-				FDEE4230194385A70000D81D /* TankLayer.cpp in Sources */,
+				FD96171E1944735500B332AD /* GameScene.cpp in Sources */,
+				FDEE4230194385A70000D81D /* TankSprite.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

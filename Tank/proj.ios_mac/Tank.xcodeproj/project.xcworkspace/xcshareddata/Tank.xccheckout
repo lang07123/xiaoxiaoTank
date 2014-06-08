@@ -17,6 +17,8 @@
 	<string>Tank/proj.ios_mac/Tank.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>4C02F674-8036-4DB4-9B2D-1EF30B48EC1B</key>
+		<string>../../../../../../Downloads/TestTank2dx</string>
 		<key>7A795F9C-0336-4FEB-88A9-9534554DA2C2</key>
 		<string>../../../..</string>
 	</dict>
@@ -28,6 +30,14 @@
 	<string>7A795F9C-0336-4FEB-88A9-9534554DA2C2</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4C02F674-8036-4DB4-9B2D-1EF30B48EC1B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TestTank2dx</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

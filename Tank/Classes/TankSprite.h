@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include <iostream>
+#include "MapLayer.h"
 
 typedef enum{
     kBorn=1,
@@ -31,7 +32,7 @@ typedef enum{
 
 class MapLayer;
 
-class TankLayer:public cocos2d::Sprite
+class TankSprite:public cocos2d::Sprite
 {
     
 public:
@@ -40,7 +41,22 @@ public:
     virtual bool init();
     
     // implement the "static create()" method manually
-    CREATE_FUNC(TankLayer);
+    CREATE_FUNC(TankSprite);
+    
+    static TankSprite *initWithDelegate(int numLife,int tKind,cocos2d::Size mSize);
+    //Tank Attritube  属性
+    int _speed;
+    int _life;
+    
+    //MapSize
+    cocos2d::Size _mapSize;
+    
+    //Tank 种类
+    TankKind kind;
+    
+    //Tank Action 方向
+    TankAction kaction;
+
 };
 
 

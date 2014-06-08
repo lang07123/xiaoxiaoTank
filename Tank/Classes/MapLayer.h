@@ -10,7 +10,7 @@
 #define __Tank__MapLeyer__
 
 #include "cocos2d.h"
-#include <iostream>
+#include "TankSprite.h"
 
 
 
@@ -19,11 +19,11 @@ class MapLayer : public cocos2d::Layer
     
 public:
     
-    // there's no 'id' in cpp, so we recommend returning the class instance pointer
-    static cocos2d::Scene* createScene();
-    
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();
+    
+    // there's no 'id' in cpp, so we recommend returning the class instance pointer
+    static cocos2d::Scene* createScene();
     
     
     // implement the "static create()" method manually
@@ -31,13 +31,22 @@ public:
     
 
     // initMap
-    
     void initMapwithTank(int mapLevel,int playerLevel,int playerLife);
+    
+    //tank
+    //*_tank1;
+    TankSprite *_tank1;
+    
+    
+    cocos2d::Point tileCoordinateFromPosition(cocos2d::Point pos);
+    
+    int tileIDFromPosition(cocos2d::Point pos);
+
 
 private:
     
     int _level;
-    //float scale;
+    float scale;
     
     cocos2d::TMXTiledMap *gameMap;
     cocos2d::TMXObjectGroup *_objects;

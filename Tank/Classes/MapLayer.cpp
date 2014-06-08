@@ -8,6 +8,8 @@
 
 #include "MapLayer.h"
 #include "GlobalSet.h"
+#include "TankSprite.h"
+
 
 USING_NS_CC;
 
@@ -48,9 +50,24 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     Size gameH=gameMap->getContentSize();
     Size LvisibleSize = visibleSize;
     
-    float scale = LvisibleSize.height / gameH.height;
+    scale = LvisibleSize.height / gameH.height;
     gameMap->setScale(scale);
     
     gameMap->setPosition(0,0);
     this->addChild(gameMap,1);
+    
+    _p1Layer=gameMap->getLayer("bg1");
+    _p2Layer=gameMap->getLayer("bg2");
+    
+    //暂时不显示P2
+    _p2Layer->setVisible(false);
+    
+    _objects=gameMap->getObjectGroup("object");
+    
+    _tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
+    _tank1->_mapLayer=this;
+    
+    
+    
+    
 }
