@@ -3,6 +3,7 @@
 
 #include "cocos2d.h"
 #include "MapLayer.h"
+#include "GameScene.h"
 
 class HelloTank : public cocos2d::Layer
 {

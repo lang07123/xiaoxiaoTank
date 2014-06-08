@@ -12,9 +12,9 @@
 #include "cocos2d.h"
 #include "TankSprite.h"
 
+class TankSprite;
 
-
-class MapLayer : public cocos2d::Layer
+class MapLayer : public cocos2d::LayerColor
 {
     
 public:
@@ -28,15 +28,12 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(MapLayer);
-    
 
     // initMap
     void initMapwithTank(int mapLevel,int playerLevel,int playerLife);
     
     //tank
-    //*_tank1;
     TankSprite *_tank1;
-    
     
     cocos2d::Point tileCoordinateFromPosition(cocos2d::Point pos);
     

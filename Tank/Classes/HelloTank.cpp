@@ -67,21 +67,23 @@ bool HelloTank::init()
     auto sprite = Sprite::create("BattleCity.png");
 
     // position the sprite on the center of the screen
-    sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
+    sprite->setPosition(Vec2(visibleSize.width/2, visibleSize.height/2+100));
+    
+    //BattleCity 放大
+    sprite->setScale(2.0f);
     // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+    this->addChild(sprite, 1);
     
     //创建菜单
     
-    auto *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_0(HelloTank::startGame,this));
+    MenuItemFont *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_0(HelloTank::startGame,this));
     
-    startItemMenu->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2-100));
-    startItemMenu->setFontSizeObj(50);
-    startItemMenu->setFontNameObj("Marker Felt");
+    startItemMenu->setPosition(Point(visibleSize.width/2,visibleSize.height/2-100));
+    startItemMenu->setFontSizeObj(55);
+    startItemMenu->setFontNameObj("Georgia-Bold");
     Menu *pMenu=Menu::create(startItemMenu,NULL);
     pMenu->setPosition(Point::ZERO);
-    this->addChild(pMenu,1);
+    this->addChild(pMenu,0);
     
     
     return true;
@@ -89,11 +91,10 @@ bool HelloTank::init()
 
 void HelloTank::startGame()
 {
-    printf("startGame");
     Scene *mapScene=Scene::create();
-    MapLayer *withGameLayer=MapLayer::create();
+    GameLayer *withGameLayer=GameLayer::create();
     mapScene->addChild(withGameLayer);
-    withGameLayer->initMapwithTank(2, 1, 3);
+    withGameLayer->initWithMapInformation(2, 1, 3);
     //动画跳转
     Director::getInstance()->replaceScene(CCTransitionJumpZoom::create(1.2f,mapScene));
     

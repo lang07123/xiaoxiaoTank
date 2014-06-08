@@ -27,7 +27,36 @@ TankSprite *TankSprite::initWithDelegate(int numLife,int tKind,Size mSize)
 {
     TankSprite *tank;
     
-   // printf('gogo');
-
-
+    switch (tKind) {
+        case kBorn:
+            
+            tank=(TankSprite *)CCSprite::createWithSpriteFrameName("p1.png");
+            
+            tank->_speed=1;
+            
+            break;
+        case kPlusStarOne:
+            
+            break;
+            
+        case kPlusStarTwo:
+            
+            break;
+            
+        case kPlusStarThree:
+            
+            break;
+            
+        default:
+            
+            break;
+    }
+    tank->_life=numLife;
+    tank->_mapSize=mSize;
+    tank->kind=(TankKind)tKind;
+    tank->setScale(0.7);
+    //
+    tank->kaction=kUp;
+    
+    return tank;
 }

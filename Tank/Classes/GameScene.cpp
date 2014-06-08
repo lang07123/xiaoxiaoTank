@@ -10,6 +10,7 @@
 #include "GameScene.h"
 #include "GlobalSet.h"
 
+using namespace CocosDenshion;
 USING_NS_CC;
 
 Scene* GameLayer::scene()
@@ -36,8 +37,6 @@ bool GameLayer::init()
     {
         return false;
     }
-    
-   
 
     return true;
 }
@@ -46,10 +45,10 @@ bool GameLayer::init()
 //初始化地图信息
 void GameLayer::initWithMapInformation(int leve, int status, int life)
 {
-     Size wSize=visibleSize
+    Size wSize=visibleSize;
     
     //开始音乐
-    //SimpleAudioEngine::sharedEngine()->playEffect("start.aif");
+    SimpleAudioEngine::getInstance()->playEffect("start.aif");
     
     
     //创建一个颜色层
@@ -104,7 +103,7 @@ void GameLayer::initWithMapInformation(int leve, int status, int life)
 //显示life
 void GameLayer::showLife(int numLife)
 {
-    Size wSize=visibleSize
+    Size wSize=visibleSize;
     
     if (_1plifeString!=NULL) {
         
@@ -123,7 +122,7 @@ void GameLayer::showLife(int numLife)
 //显示关卡
 void GameLayer::showLeve(int inLeve)
 {
-    Size wSize=visibleSize
+    Size wSize=visibleSize;
     
     
     if (_leveString!=NULL) {

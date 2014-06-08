@@ -15,9 +15,9 @@
 
 typedef enum{
     kBorn=1,
-    kPlusStartOne,
-    kPlusStartTwo,
-    kPlusStartThree
+    kPlusStarOne,
+    kPlusStarTwo,
+    kPlusStarThree
 }TankKind;
 
 typedef enum{
@@ -56,6 +56,10 @@ public:
     
     //Tank Action 方向
     TankAction kaction;
+    
+    MapLayer *_mapLayer;
+    
+    cocos2d::TMXTiledMap *gameMap;
 
 };
 
