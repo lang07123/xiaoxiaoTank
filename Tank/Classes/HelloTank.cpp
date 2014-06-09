@@ -78,7 +78,7 @@ bool HelloTank::init()
     
     MenuItemFont *startItemMenu=MenuItemFont::create("开始游戏",CC_CALLBACK_0(HelloTank::startGame,this));
     
-    startItemMenu->setPosition(Point(visibleSize.width/2,visibleSize.height/2-100));
+    startItemMenu->setPosition(Vec2(visibleSize.width/2,visibleSize.height/2-100));
     startItemMenu->setFontSizeObj(55);
     startItemMenu->setFontNameObj("Georgia-Bold");
     Menu *pMenu=Menu::create(startItemMenu,NULL);

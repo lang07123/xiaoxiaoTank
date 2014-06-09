@@ -34,6 +34,8 @@ public:
     
     void showLeve(int inLeve);
     
+    void showEnemyRoboot(int enemyLife);
+    
 private:
     
     cocos2d::Label *_1plifeString;

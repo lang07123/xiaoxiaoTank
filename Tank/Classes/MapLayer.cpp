@@ -49,13 +49,15 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     gameMap = TMXTiledMap::create(String::createWithFormat("map%d.tmx",mapLevel)->getCString());
     
     //缩放比例
-    Size gameH=gameMap->getContentSize();
+    
     Size LvisibleSize = visibleSize;
     
-    scale = LvisibleSize.height / gameH.height;
+    scale = LvisibleSize.height / gameMap->getContentSize().height;
+
     gameMap->setScale(scale);
     
     gameMap->setPosition(0,0);
+    
     this->addChild(gameMap,1);
     
     _p1Layer=gameMap->getLayer("bg1");
@@ -71,7 +73,7 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     _tank1->gameMap=gameMap;
     //Point tankPoint=this->objectPosition(_objects, "pl1");
     
-    //_tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
+    //_tank1->setPosition(Vec2(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
     
     //gameMap->addChild(_tank1, 2);
 

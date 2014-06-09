@@ -16,6 +16,7 @@ USING_NS_CC;
 bool TankSprite::init()
 {
     if(!Sprite::init())
+        
     {
         return false;
     }

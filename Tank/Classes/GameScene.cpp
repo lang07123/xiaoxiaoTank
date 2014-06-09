@@ -59,36 +59,40 @@ void GameLayer::initWithMapInformation(int leve, int status, int life)
     //精灵帧类,提高效率
     SpriteFrameCache *frameCache=SpriteFrameCache::getInstance();
     
-    
     frameCache->addSpriteFramesWithFile("images.plist");
     
+    frameCache->autorelease();
     
     //场景内一些精灵的创建
     Sprite *ipLife=Sprite::createWithSpriteFrameName("IP.png");
-    ipLife->setPosition(Point(30*2, wSize.height-50*2));
+    ipLife->setPosition(Point(wSize.width-200, wSize.height/2-50));
     ipLife->setScale(2.0f);
     this->addChild(ipLife,1);
     
     Sprite *ipLifeIcok=Sprite::createWithSpriteFrameName("p1.png");
-    ipLifeIcok->setPosition(Point(40, wSize.height-70*2));
+    ipLifeIcok->setPosition(Point(wSize.width-215, wSize.height/2-80));
     ipLifeIcok->setScale(1.0f);
     this->addChild(ipLifeIcok,1);
     this->showLife(life);
     
     Sprite *flag=Sprite::createWithSpriteFrameName("flag.png");
-    flag->setPosition(Point(wSize.width-100, wSize.height-200*2));
+    flag->setPosition(Point(wSize.width-200, wSize.height/2-200));
     flag->setScale(2.0f);
     this->addChild(flag,1);
-    
     this->showLeve(leve);
     
     _mapLayer=MapLayer::create();
     
     _mapLayer->initMapwithTank(leve, status, life);
     
-    _mapLayer->setPosition(Point(wSize.width/6, 0));
+    //设置图片位置
+    _mapLayer->setPosition(Point(wSize.height/3, 0));
+    
+    //设置背景缩放比例
+    _mapLayer->setScale(1);
     
     this->addChild(_mapLayer,1);
+    
     
     
     //_conLayer=ControlLayer::create();
@@ -96,6 +100,7 @@ void GameLayer::initWithMapInformation(int leve, int status, int life)
     
     //this->addChild(_conLayer, 1);
     
+    this->showEnemyRoboot(5);
     
 }
 
@@ -113,7 +118,7 @@ void GameLayer::showLife(int numLife)
     }
     _1plifeString=Label::create(CCString::createWithFormat("%d",numLife)->getCString(), "Courier-Bold", 40);
     _1plifeString->setColor(Color3B(0, 0, 0));
-    _1plifeString->setPosition(Point(45*2, wSize.height-70*2));
+    _1plifeString->setPosition(Point(wSize.width-180, wSize.height/2-80));
     this->addChild(_1plifeString,1);
     
 }
@@ -133,9 +138,39 @@ void GameLayer::showLeve(int inLeve)
     }
     _leveString=Label::create(CCString::createWithFormat("%d",inLeve)->getCString(), "Courier-Bold", 40);
     _leveString->setColor(Color3B(0, 0, 0));
-    _leveString->setPosition(Point(wSize.width-100, wSize.height-230*2));
+    _leveString->setPosition(Point(wSize.width-160, wSize.height/2-230));
     this->addChild(_leveString,1);
     
     
 }
+
+
+void GameLayer::showEnemyRoboot(int enemyLife)
+{
+    
+    Size wSize=visibleSize;
+    
+    //SpriteBatchNode *enemyNode =SpriteBatchNode::createWithTexture("enemy.png",20);
+    int y=50;
+    int x=215;
+    
+    for (int i =1; i<=enemyLife; ++i) {
+        
+        Sprite *flag=Sprite::createWithSpriteFrameName("enemy.png");
+        flag->setPosition(Point(wSize.width-x, wSize.height-y));
+        flag->setScale(2.0f);
+        
+        this->addChild(flag,1);
+        
+        if (i%2==0) {
+            y+=20;
+        }
+        else {
+            x-=20;
+        }
+    }
+    
+
+}
+
 
