@@ -12,6 +12,8 @@
 #include "cocos2d.h"
 #include "TankSprite.h"
 
+USING_NS_CC;
+
 class TankSprite;
 
 class MapLayer : public cocos2d::LayerColor
@@ -34,6 +36,8 @@ public:
     
     //tank
     TankSprite *_tank1;
+    
+    Point tankPoint;
     
     cocos2d::Point tileCoordinateFromPosition(cocos2d::Point pos);
     

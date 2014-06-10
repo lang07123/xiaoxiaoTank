@@ -13,6 +13,8 @@
 #include <iostream>
 #include "MapLayer.h"
 
+USING_NS_CC;
+
 class GameLayer:public cocos2d::Layer
 {
     
@@ -35,6 +37,8 @@ public:
     void showLeve(int inLeve);
     
     void showEnemyRoboot(int enemyLife);
+    
+    Vector<Sprite*> enemyVector;
     
 private:
     

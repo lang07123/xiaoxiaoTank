@@ -100,7 +100,7 @@ void GameLayer::initWithMapInformation(int leve, int status, int life)
     
     //this->addChild(_conLayer, 1);
     
-    this->showEnemyRoboot(5);
+    this->showEnemyRoboot(20);
     
 }
 
@@ -148,6 +148,8 @@ void GameLayer::showLeve(int inLeve)
 void GameLayer::showEnemyRoboot(int enemyLife)
 {
     
+    
+    
     Size wSize=visibleSize;
     
     //SpriteBatchNode *enemyNode =SpriteBatchNode::createWithTexture("enemy.png",20);
@@ -163,10 +165,13 @@ void GameLayer::showEnemyRoboot(int enemyLife)
         this->addChild(flag,1);
         
         if (i%2==0) {
+            x=215;
             y+=20;
+            
         }
         else {
-            x-=20;
+            x=195;
+            
         }
     }
     

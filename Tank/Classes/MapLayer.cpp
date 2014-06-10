@@ -71,11 +71,11 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     _tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
     _tank1->_mapLayer=this;
     _tank1->gameMap=gameMap;
-    //Point tankPoint=this->objectPosition(_objects, "pl1");
+    Point tankPoint=this->objectPosition(_objects, "pl1");
     
-    //_tank1->setPosition(Vec2(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
+    _tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
     
-    //gameMap->addChild(_tank1, 2);
+    gameMap->addChild(_tank1, 2);
 
     
     
