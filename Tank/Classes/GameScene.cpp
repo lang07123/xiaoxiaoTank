@@ -148,8 +148,6 @@ void GameLayer::showLeve(int inLeve)
 void GameLayer::showEnemyRoboot(int enemyLife)
 {
     
-    
-    
     Size wSize=visibleSize;
     
     //SpriteBatchNode *enemyNode =SpriteBatchNode::createWithTexture("enemy.png",20);

@@ -35,7 +35,13 @@ public:
     void initMapwithTank(int mapLevel,int playerLevel,int playerLife);
     
     //tank
-    TankSprite *_tank1;
+    //TankSprite *_tank1;
+    Sprite *_tank1;
+    
+    
+    //Home
+    
+    Sprite *_home;
     
     Point tankPoint;
     

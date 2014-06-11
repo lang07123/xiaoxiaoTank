@@ -53,30 +53,40 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     Size LvisibleSize = visibleSize;
     
     scale = LvisibleSize.height / gameMap->getContentSize().height;
-
     gameMap->setScale(scale);
-    
     gameMap->setPosition(0,0);
-    
     this->addChild(gameMap,1);
     
     _p1Layer=gameMap->getLayer("bg1");
     _p2Layer=gameMap->getLayer("bg2");
     
-    //暂时不显示P2
+    //  暂时不显示铁皮城堡
     _p2Layer->setVisible(false);
     
+    //  获取TMX objects 图层
     _objectGroup=gameMap->getObjectGroup("objects");
+
     
-    _tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
-    _tank1->_mapLayer=this;
-    _tank1->gameMap=gameMap;
+    // 增加老家图片
+    _home=Sprite::createWithSpriteFrameName("home.png");
+    Point homePoint=this->objectPosition(_objectGroup, "home");
+    _home->setPosition(Point(homePoint.x+_home->boundingBox().size.width/2, homePoint.y+_home->boundingBox().size.height/2));
+    gameMap->addChild(_home, -1);
+    
+    
+    
+    //  增加P1进入游戏
+    _tank1=Sprite::createWithSpriteFrameName("p1.png");
+    
+    //_tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
+    //_tank1->_mapLayer=this;
+    //_tank1->gameMap=gameMap;
     Point tankPoint=this->objectPosition(_objectGroup, "pl1");
     
-    //_tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
-    _tank1->setPosition(Point(tankPoint.x+gameMap->getTileSize().width,tankPoint.y+gameMap->getTileSize().height));
+    _tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
+
     
-    _tank1->setScale(0.7f);
+    //_tank1->setScale(0.7f);
     gameMap->addChild(_tank1, -1);
 
     
