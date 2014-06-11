@@ -84,7 +84,6 @@
 		FD2C762919448DBD00676DD3 /* fire_button_default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762519448DBD00676DD3 /* fire_button_default.png */; };
 		FD2C762A19448DBD00676DD3 /* fire_button_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762619448DBD00676DD3 /* fire_button_press.png */; };
 		FD89823E194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
-		FD89823F194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
 		FD96171E1944735500B332AD /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD96171C1944735500B332AD /* GameScene.cpp */; };
 		FD9617271944754C00B332AD /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617241944754C00B332AD /* sound3.aif */; };
 		FD9617281944754C00B332AD /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617241944754C00B332AD /* sound3.aif */; };
@@ -780,7 +779,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FD89823F194191E30085A04F /* MapLayer.cpp in Sources */,
 				5087E75717EB910900C73F5D /* AppDelegate.cpp in Sources */,
 				5087E75817EB910900C73F5D /* HelloTank.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,

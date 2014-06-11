@@ -138,7 +138,7 @@ void GameLayer::showLeve(int inLeve)
     }
     _leveString=Label::create(CCString::createWithFormat("%d",inLeve)->getCString(), "Courier-Bold", 40);
     _leveString->setColor(Color3B(0, 0, 0));
-    _leveString->setPosition(Point(wSize.width-160, wSize.height/2-230));
+    _leveString->setPosition(Point(wSize.width-180, wSize.height/2-240));
     this->addChild(_leveString,1);
     
     

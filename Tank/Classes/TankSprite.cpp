@@ -31,7 +31,7 @@ TankSprite *TankSprite::initWithDelegate(int numLife,int tKind,Size mSize)
     switch (tKind) {
         case kBorn:
             
-            tank=(TankSprite *)CCSprite::createWithSpriteFrameName("p1.png");
+            tank=(TankSprite *)Sprite::createWithSpriteFrameName("p1.png");
             
             tank->_speed=1;
             

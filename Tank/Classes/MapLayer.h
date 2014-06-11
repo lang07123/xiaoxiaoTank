@@ -50,7 +50,7 @@ private:
     float scale;
     
     cocos2d::TMXTiledMap *gameMap;
-    cocos2d::TMXObjectGroup *_objects;
+    cocos2d::TMXObjectGroup *_objectGroup;
     
     cocos2d::TMXLayer *_p1Layer;
     cocos2d::TMXLayer *_p2Layer;

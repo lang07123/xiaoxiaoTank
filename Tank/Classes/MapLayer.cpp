@@ -61,25 +61,35 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     this->addChild(gameMap,1);
     
     _p1Layer=gameMap->getLayer("bg1");
-    //_p2Layer=gameMap->getLayer("bg2");
+    _p2Layer=gameMap->getLayer("bg2");
     
     //暂时不显示P2
-    //_p2Layer->setVisible(false);
+    _p2Layer->setVisible(false);
     
-    _objects=gameMap->getObjectGroup("object");
+    _objectGroup=gameMap->getObjectGroup("objects");
     
     _tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
     _tank1->_mapLayer=this;
     _tank1->gameMap=gameMap;
-    Point tankPoint=this->objectPosition(_objects, "pl1");
+    Point tankPoint=this->objectPosition(_objectGroup, "pl1");
     
-    _tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
+    //_tank1->setPosition(Point(tankPoint.x+_tank1->boundingBox().size.width/2, tankPoint.y+_tank1->boundingBox().size.height/2));
+    _tank1->setPosition(Point(tankPoint.x+gameMap->getTileSize().width,tankPoint.y+gameMap->getTileSize().height));
     
-    gameMap->addChild(_tank1, 2);
+    _tank1->setScale(0.7f);
+    gameMap->addChild(_tank1, -1);
 
     
+}
+
+Point MapLayer::objectPosition(TMXObjectGroup *group, const char *object)
+{
+    Point objectPoint;
     
+    auto spawnPoint=group->getObject(object);
+    objectPoint.x=spawnPoint["x"].asFloat();
+    objectPoint.y=spawnPoint["y"].asFloat();
     
-    
-    
+    return objectPoint;
+
 }
