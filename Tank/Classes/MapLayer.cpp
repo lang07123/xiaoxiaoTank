@@ -77,7 +77,6 @@ void MapLayer::initMapwithTank(int mapLevel,int playerLevel,int playerLife)
     
     //  增加P1进入游戏
     _tank1=Sprite::createWithSpriteFrameName("p1.png");
-    
     //_tank1 =TankSprite::initWithDelegate(playerLevel, playerLife, _p1Layer->getContentSize());
     //_tank1->_mapLayer=this;
     //_tank1->gameMap=gameMap;

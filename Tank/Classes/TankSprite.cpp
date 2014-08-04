@@ -55,7 +55,7 @@ TankSprite *TankSprite::initWithDelegate(int numLife,int tKind,Size mSize)
     tank->_life=numLife;
     tank->_mapSize=mSize;
     tank->kind=(TankKind)tKind;
-    tank->setScale(0.7);
+    //tank->setScale(0.7);
     //
     tank->kaction=kUp;
     

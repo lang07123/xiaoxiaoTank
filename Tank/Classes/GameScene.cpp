@@ -129,9 +129,7 @@ void GameLayer::showLeve(int inLeve)
 {
     Size wSize=visibleSize;
     
-    
     if (_leveString!=NULL) {
-        
         
         _leveString->removeFromParentAndCleanup(true);
         

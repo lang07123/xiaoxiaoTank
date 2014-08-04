@@ -79,10 +79,11 @@
 		FD1CE995193FC6440040C7E5 /* map2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = FD1CE98C193FC6440040C7E5 /* map2.tmx */; };
 		FD1CE996193FC6440040C7E5 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1CE98D193FC6440040C7E5 /* tile.png */; };
 		FD1CE997193FC6440040C7E5 /* tile.png in Resources */ = {isa = PBXBuildFile; fileRef = FD1CE98D193FC6440040C7E5 /* tile.png */; };
-		FD2C762719448DBD00676DD3 /* cen.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762319448DBD00676DD3 /* cen.png */; };
+		FD2C762719448DBD00676DD3 /* control.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762319448DBD00676DD3 /* control.png */; };
 		FD2C762819448DBD00676DD3 /* control_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762419448DBD00676DD3 /* control_bg.png */; };
 		FD2C762919448DBD00676DD3 /* fire_button_default.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762519448DBD00676DD3 /* fire_button_default.png */; };
 		FD2C762A19448DBD00676DD3 /* fire_button_press.png in Resources */ = {isa = PBXBuildFile; fileRef = FD2C762619448DBD00676DD3 /* fire_button_press.png */; };
+		FD2C763B194AE12F00676DD3 /* joystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD2C7639194AE12F00676DD3 /* joystick.cpp */; };
 		FD89823E194191E30085A04F /* MapLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD89823C194191E30085A04F /* MapLayer.cpp */; };
 		FD96171E1944735500B332AD /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FD96171C1944735500B332AD /* GameScene.cpp */; };
 		FD9617271944754C00B332AD /* sound3.aif in Resources */ = {isa = PBXBuildFile; fileRef = FD9617241944754C00B332AD /* sound3.aif */; };
@@ -295,10 +296,12 @@
 		FD1CE98B193FC6440040C7E5 /* images.pvr.ccz */ = {isa = PBXFileReference; lastKnownFileType = file; path = images.pvr.ccz; sourceTree = "<group>"; };
 		FD1CE98C193FC6440040C7E5 /* map2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = map2.tmx; path = ../Resources/map2.tmx; sourceTree = "<group>"; };
 		FD1CE98D193FC6440040C7E5 /* tile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tile.png; sourceTree = "<group>"; };
-		FD2C762319448DBD00676DD3 /* cen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cen.png; sourceTree = "<group>"; };
+		FD2C762319448DBD00676DD3 /* control.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control.png; sourceTree = "<group>"; };
 		FD2C762419448DBD00676DD3 /* control_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = control_bg.png; sourceTree = "<group>"; };
 		FD2C762519448DBD00676DD3 /* fire_button_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire_button_default.png; sourceTree = "<group>"; };
 		FD2C762619448DBD00676DD3 /* fire_button_press.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fire_button_press.png; sourceTree = "<group>"; };
+		FD2C7639194AE12F00676DD3 /* joystick.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = joystick.cpp; path = ../Classes/joystick.cpp; sourceTree = "<group>"; };
+		FD2C763A194AE12F00676DD3 /* joystick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = joystick.h; path = ../Classes/joystick.h; sourceTree = "<group>"; };
 		FD89823C194191E30085A04F /* MapLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MapLayer.cpp; path = ../Classes/MapLayer.cpp; sourceTree = "<group>"; };
 		FD89823D194191E30085A04F /* MapLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MapLayer.h; path = ../Classes/MapLayer.h; sourceTree = "<group>"; };
 		FD8982421941927E0085A04F /* GlobalSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlobalSet.h; path = ../Classes/GlobalSet.h; sourceTree = "<group>"; };
@@ -389,6 +392,8 @@
 				FDEE422F194385A70000D81D /* TankSprite.h */,
 				FD96171C1944735500B332AD /* GameScene.cpp */,
 				FD96171D1944735500B332AD /* GameScene.h */,
+				FD2C7639194AE12F00676DD3 /* joystick.cpp */,
+				FD2C763A194AE12F00676DD3 /* joystick.h */,
 			);
 			name = Classes;
 			path = ../classes;
@@ -508,7 +513,7 @@
 			children = (
 				FD1CE989193FC6440040C7E5 /* BattleCity.png */,
 				FD1CE98B193FC6440040C7E5 /* images.pvr.ccz */,
-				FD2C762319448DBD00676DD3 /* cen.png */,
+				FD2C762319448DBD00676DD3 /* control.png */,
 				FD2C762419448DBD00676DD3 /* control_bg.png */,
 				FD2C762519448DBD00676DD3 /* fire_button_default.png */,
 				FD2C762619448DBD00676DD3 /* fire_button_press.png */,
@@ -717,7 +722,7 @@
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
 				1AFAF8BD16D35E4900DB1158 /* CloseSelected.png in Resources */,
-				FD2C762719448DBD00676DD3 /* cen.png in Resources */,
+				FD2C762719448DBD00676DD3 /* control.png in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				1AFAF8BE16D35E4900DB1158 /* HelloWorld.png in Resources */,
@@ -770,6 +775,7 @@
 				1AFAF8B716D35DE700DB1158 /* AppDelegate.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
 				1AFAF8B816D35DE700DB1158 /* HelloTank.cpp in Sources */,
+				FD2C763B194AE12F00676DD3 /* joystick.cpp in Sources */,
 				FD96171E1944735500B332AD /* GameScene.cpp in Sources */,
 				FDEE4230194385A70000D81D /* TankSprite.cpp in Sources */,
 			);
